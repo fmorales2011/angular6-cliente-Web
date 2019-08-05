@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-5">
+        <p><b>Promedio Edades</b>: {{valueMean}}</p>
+    </div>
+    <div class="col-md-5">
+        <p><b>Desv. Estandar Edades</b>: {{valueStd}}</p>
+    </div>
+    <div class="col-md-2">
+        <button (click)="crearUser()" class="btn btn-success">Nuevo Cliente</button>
+    </div>
+</div>
+<table class="table table-striped">
+    <thead>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Fecha Nacimiento</th>
+        <th>Edad</th>
+        <th>Fecha Probable Muerte</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cliente of clientes">
+            <td>{{cliente.nombre.toUpperCase()}}</td>
+            <td>{{cliente.apellido.toUpperCase()}}</td>
+            <td>{{cliente.fechaNacimiento.toUpperCase()}}</td>
+            <td>{{cliente.edad}}</td>
+            <td>{{this.calculateFechaProbableMuerte( cliente.fechaNacimiento, cliente.edad)}}
+            </td>
+        </tr>
+    </tbody>
+</table>

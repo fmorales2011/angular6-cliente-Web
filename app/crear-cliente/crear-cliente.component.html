@@ -1,0 +1,38 @@
+<div class="col-md-6">
+    <h2 class="text-center">Nuevo Cliente</h2>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" formControlName="nombre" placeholder="" class="form-control" id="nombre">
+        </div>
+
+        <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" formControlName="apellido" placeholder="" class="form-control" id="apellido">
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-6 mb-4">
+                <label for="apellido">Fecha Nacimiento:</label>
+                <div class="input-group">
+                    <input formControlName="date" placeholder="" style="width: 100px;" name="dp" ngbDatepicker #d="ngbDatepicker" [(ngModel)]="date" (ngModelChange)='onValueChange(date)'>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <label for="edad">Edad:</label>
+                <div class="input-group">
+                    <input type="text" style="width: 100px;" id="edad" value="{{edad}}" disabled>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-12">
+                <button class="btn btn-success" style="float:right;">Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>
