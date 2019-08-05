@@ -1,12 +1,15 @@
 <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-4" mb-4>
         <p><b>Promedio Edades</b>: {{valueMean}}</p>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-4" mb-4>
         <p><b>Desv. Estandar Edades</b>: {{valueStd}}</p>
     </div>
-    <div class="col-md-2">
-        <button (click)="crearUser()" class="btn btn-success">Nuevo Cliente</button>
+    <div class="col-md-2  mb-4">
+        <button (click)="crearCliente()" class="btn btn-success">Nuevo Cliente</button>
+    </div>
+    <div class="col-md-2  mb-4">
+        <button (click)="reporteCliente()" class="btn btn-success">Resumen Cliente</button>
     </div>
 </div>
 <table class="table table-striped">

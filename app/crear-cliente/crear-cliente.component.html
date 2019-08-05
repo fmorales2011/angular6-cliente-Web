@@ -12,7 +12,7 @@
         </div>
 
         <div class="form-row">
-            <div class="col-md-6 mb-4">
+            <div class="col-md-8 mb-4">
                 <label for="apellido">Fecha Nacimiento:</label>
                 <div class="input-group">
                     <input formControlName="date" placeholder="" style="width: 100px;" name="dp" ngbDatepicker #d="ngbDatepicker" [(ngModel)]="date" (ngModelChange)='onValueChange(date)'>
@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
+            <div class="col-md-4 mb-4">
                 <label for="edad">Edad:</label>
                 <div class="input-group">
                     <input type="text" style="width: 100px;" id="edad" value="{{edad}}" disabled>

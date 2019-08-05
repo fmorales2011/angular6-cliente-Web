@@ -35,8 +35,12 @@ export class ListarClienteComponent implements OnInit {
     });
   }
 
-  crearUser(): void {
+  crearCliente(): void {
     this.router.navigate(['crear-cliente']);
+  }
+
+  reporteCliente(): void {
+    this.router.navigate(['reporte-cliente']);
   }
 
   calculateFechaProbableMuerte(fechaNacimiento: string, edad: number) {
